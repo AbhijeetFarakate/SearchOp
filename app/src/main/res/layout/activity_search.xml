@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.smita.mycityguru.SearchActivity"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/searchToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        style="@style/SearchBarTheme"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <AutoCompleteTextView
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:ems="10"
+                android:hint="Enter Place"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:lines="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:inputType="textAutoCorrect|textAutoComplete"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:textCursorDrawable="@drawable/cursor"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp"
+                android:textStyle="normal">
+
+                <requestFocus/>
+
+            </AutoCompleteTextView>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/searchRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchToolBar"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+</RelativeLayout>
